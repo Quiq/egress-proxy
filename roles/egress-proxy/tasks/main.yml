@@ -15,14 +15,6 @@
     group: nogroup
     create_home: no
 
-- user:
-    name: john.doe
-    comment: "Egress Proxy"
-    uid: 64445
-    shell: /usr/sbin/nologin
-    group: nogroup
-    create_home: no
-
 - name: Create directory
   file: path=/opt/egress-proxy state=directory mode=0750 owner=egress.proxy group=nogroup
 
