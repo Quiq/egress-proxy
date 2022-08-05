@@ -1,0 +1,20 @@
+---
+# oauth
+- set_fact:
+    oauth:
+      - "www.googleapis.com"
+      - "oauth2.googleapis.com"
+
+# slack
+- set_fact:
+    slack:
+      - ".slack.com"
+
+# test
+- set_fact:
+    test:
+      - "ifconfig.me"
+
+# my test hostname where I have oauth2 proxy and some app which can send slack notifications
+- set_fact:
+    whitelisted_domains: "{{ test + slack + oauth }}"
